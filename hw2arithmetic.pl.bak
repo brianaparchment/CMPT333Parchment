@@ -2,9 +2,10 @@
 triangle(0,0).
 triangle(N,T):-
 	N>0,
+	T>0,
 	N1 is N-1,
-	triangle(N1,T1),
-	T is N+T1,
+	T1 is T+N,
+	triangle(N1,T1).
 
 /*Problem 2*/
 triangle(N,T):-
